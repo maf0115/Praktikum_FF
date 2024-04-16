@@ -8,6 +8,10 @@ TagManager:
   - Flame
   - Water
   - Destroyer
+<<<<<<< HEAD
+=======
+  - PickUp
+>>>>>>> 5ac76029aae67d8d46b8b838c9d50e823330c47e
   layers:
   - Default
   - TransparentFX
