@@ -7,6 +7,7 @@ public class PlayerControl : MonoBehaviour
     Vector3 movement = new Vector3();
     Rigidbody rb;
     float speed = 1.2f;
+    private bool keyboard = false; 
 
     // Start is called before the first frame update
     void Start()
@@ -16,15 +17,18 @@ public class PlayerControl : MonoBehaviour
 
     // Update is called once per frame
     void FixedUpdate()
-    {
-        float moveHorizontal = Input.GetAxis("Horizontal");
-        float moveVertical = Input.GetAxis("Vertical");
+    {       
+            float moveHorizontal = Input.GetAxis("Horizontal");
+            float moveVertical = Input.GetAxis("Vertical");
 
-        movement.x = moveHorizontal;
-        movement.y = 0f; 
-        movement.z = moveVertical;
+            movement.x = moveHorizontal;
+            movement.y = 0f;
+            movement.z = moveVertical;
 
-        rb.AddForce(movement * speed); 
+        if (keyboard)
+        {
+            rb.AddForce(movement * speed); 
+        }     
     }
 
     private void OnTriggerEnter(Collider other)
