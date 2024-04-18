@@ -3,15 +3,7 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags:
-  - Projectile
-  - Flame
-  - Water
-  - Destroyer
-<<<<<<< HEAD
-=======
-  - PickUp
->>>>>>> 5ac76029aae67d8d46b8b838c9d50e823330c47e
+  tags: []
   layers:
   - Default
   - TransparentFX
@@ -41,10 +33,10 @@ TagManager:
   - 
   - 
   - 
-  - Pushable
-  - Character Collider
-  - Character Controller
-  - Teleport
+  - 
+  - 
+  - 
+  - 
   m_SortingLayers:
   - name: Default
     uniqueID: 0
