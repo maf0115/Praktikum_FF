@@ -5,21 +5,28 @@ using UnityEngine.SceneManagement;
 
 public class SwitchScene : MonoBehaviour
 {
-    HingeJoint doorHinge;
-    public string scene = "Cockpit"; 
+    public string scene = "Cockpit";
+
 
     // Start is called before the first frame update
     void Start()
     {
-        doorHinge = GetComponent<HingeJoint>();
+
     }
+
+  
 
     // Update is called once per frame
     void Update()
+
     {
-        if (this.transform.rotation.y > doorHinge.limits.max)
+        Debug.Log(this.transform.rotation.y); 
+        if (this.transform.rotation.y >= 0.65)
         {
-            SceneManager.LoadScene(scene); 
+            Debug.Log("Switching scene to " + scene);
+            SceneManager.LoadScene(scene);
+            
+            
         }
     }
 }

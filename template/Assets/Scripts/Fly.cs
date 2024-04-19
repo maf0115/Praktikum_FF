@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Numerics;
 using UnityEditor.Rendering;
 using UnityEngine;
 
@@ -17,36 +18,37 @@ public class Fly : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.S))
         {
-            this.transform.Translate(Vector3.forward * speed * Time.deltaTime);
+            this.transform.Translate(UnityEngine.Vector3.forward * speed * Time.deltaTime);
         }
 
         if (Input.GetKey(KeyCode.W))
         {
-            this.transform.Translate(Vector3.back * speed * Time.deltaTime);
+            this.transform.Translate(UnityEngine.Vector3.back * speed * Time.deltaTime);
         }
 
         if (Input.GetKey(KeyCode.Space))
         {
-            this.transform.Translate(Vector3.up * speed * Time.deltaTime);
+            this.transform.Translate(UnityEngine.Vector3.up * speed * Time.deltaTime);
         }
 
         if (Input.GetKey(KeyCode.LeftShift))
         {
-            this.transform.Translate(Vector3.down * speed * Time.deltaTime);
+            this.transform.Translate( UnityEngine.Vector3.down * speed * Time.deltaTime);
         }
 
         //Rotation to the left
         if (Input.GetKey(KeyCode.A))
         {
-            this.transform.Rotate(new Vector3(0, 0, -speed) * Time.deltaTime);   
+            this.transform.Rotate(new UnityEngine.Vector3(0, 0, -speed) * Time.deltaTime);
+            this.transform.Translate( UnityEngine.Vector3.left * speed * Time.deltaTime); 
         }
 
         //Rotation to the right
         if (Input.GetKey(KeyCode.D))
         {
 
-            this.transform.Rotate(new Vector3(0, 0, speed) * Time.deltaTime);
-
+            this.transform.Rotate(new UnityEngine.Vector3(0, 0, speed) * Time.deltaTime);
+            this.transform.Translate( UnityEngine.Vector3.right * speed * Time.deltaTime);
         }
     }
 }
