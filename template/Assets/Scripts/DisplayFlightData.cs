@@ -11,6 +11,7 @@ public class DisplayFLightData : MonoBehaviour
     public GameObject player;
     public float warningHeigth = 100;
     public GameObject warnImage;
+    public GameObject OkImage; 
     private FlyJoystick flyJoystick;
 
     // Start is called before the first frame update
@@ -31,10 +32,13 @@ public class DisplayFLightData : MonoBehaviour
         if(player.transform.position.y <= warningHeigth)
         {
             warnImage.SetActive( true );
+            OkImage.SetActive( false );
         }
         else
         {
-            warnImage.SetActive( false );   
+            warnImage.SetActive( false );
+            OkImage.SetActive( true );
+
         }
     }
 }

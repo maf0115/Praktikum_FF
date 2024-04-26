@@ -17,7 +17,7 @@ public class FacePlayer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        this.transform.position = player.transform.position + distance * player.transform.forward + distance/4 * player.transform.right + distance/10 * player.transform.up;
+        this.transform.position = player.transform.position + player.transform.forward * distance + player.transform.right * distance/3;
 
        this.transform.rotation = player.transform.rotation; 
     }

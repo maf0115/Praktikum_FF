@@ -11,12 +11,18 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/2 Game Scene.unity
     guid: eccb2bc76074b2849b626b75e749890d
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Inspektion.unity
     guid: 4301c65c20f1a0d46b72b17fa1750884
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Cockpit.unity
     guid: 7c40c13becdefda4b9461726d310becb
+  - enabled: 1
+    path: Assets/Scenes/InspektionNew.unity
+    guid: 9fd62a3864f89b1428bac7224a3f8aec
+  - enabled: 1
+    path: Assets/Scenes/CockpitNew.unity
+    guid: 383a6626c3f4ab046858c3003e72b025
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 2238d457089b9494896515a25debf01c,
       type: 2}

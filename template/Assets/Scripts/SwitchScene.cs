@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class SwitchScene : MonoBehaviour
 {
-    public string scene = "Cockpit";
+    public string scene = "CockpitNew";
 
 
     // Start is called before the first frame update
@@ -21,7 +21,7 @@ public class SwitchScene : MonoBehaviour
 
     {
         Debug.Log(this.transform.rotation.y); 
-        if (this.transform.rotation.y >= 0.65)
+        if (this.transform.rotation.y <= 0.3)
         {
             Debug.Log("Switching scene to " + scene);
             SceneManager.LoadScene(scene);
