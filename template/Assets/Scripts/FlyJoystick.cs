@@ -1,12 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.XR.Content.Interaction;
 
 public class FlyJoystick : MonoBehaviour
 {
     public float speed = 1.2f; 
     public float speedAmplifier = 1.5f;
-    public float rotationSpeed = 4.5f; 
+    public float rotationSpeed = 4.5f;
+
 
     // Start is called before the first frame update
     void Start()
