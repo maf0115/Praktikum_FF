@@ -46,7 +46,7 @@ public class ButtonVR : MonoBehaviour
         }
     }
 
-    public void DeactivateConsole()
+    public void ToggleConsole()
     {
         console.enabled = !console.enabled; 
     }
