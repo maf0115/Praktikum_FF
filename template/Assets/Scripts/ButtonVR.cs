@@ -20,7 +20,6 @@ public class ButtonVR : MonoBehaviour
     void Start()
     {
         sound = GetComponent<AudioSource>();
-        console = GetComponent<Canvas>();
         isPressed = false;
     }
 
@@ -48,6 +47,14 @@ public class ButtonVR : MonoBehaviour
 
     public void ToggleConsole()
     {
-        console.enabled = !console.enabled; 
+        if ( console.enabled == true ) 
+        {
+            console.enabled = false; 
+        }
+
+        else
+        {
+            console.enabled = true;
+        }
     }
 }

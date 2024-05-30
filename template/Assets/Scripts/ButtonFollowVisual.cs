@@ -29,6 +29,7 @@ public class ButtonFollowVisual : MonoBehaviour
         interactable.hoverEntered.AddListener(Follow);
         interactable.hoverExited.AddListener(Reset);
         interactable.selectEntered.AddListener(Freeze);
+
     }
 
     public void Follow(BaseInteractionEventArgs hover)
@@ -66,8 +67,6 @@ public class ButtonFollowVisual : MonoBehaviour
             freeze = true;
         }
     }
-
-
 
     // Update is called once per frame
     void Update()

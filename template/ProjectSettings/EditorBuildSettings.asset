@@ -5,21 +5,9 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: Assets/Scenes/1 Start Scene.unity
-    guid: 99c9720ab356a0642a771bea13969a05
-  - enabled: 0
-    path: Assets/Scenes/2 Game Scene.unity
-    guid: eccb2bc76074b2849b626b75e749890d
-  - enabled: 0
-    path: Assets/Scenes/Inspektion.unity
-    guid: 4301c65c20f1a0d46b72b17fa1750884
-  - enabled: 0
-    path: Assets/Scenes/Cockpit.unity
-    guid: 7c40c13becdefda4b9461726d310becb
   - enabled: 1
-    path: Assets/Scenes/InspektionNew.unity
-    guid: 9fd62a3864f89b1428bac7224a3f8aec
+    path: Assets/Scenes/Inspektion2.unity
+    guid: c0616b28b1a491d49a701c3c09a0e601
   - enabled: 1
     path: Assets/Scenes/CockpitNew.unity
     guid: 383a6626c3f4ab046858c3003e72b025

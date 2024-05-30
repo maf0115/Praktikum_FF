@@ -5,10 +5,12 @@ using UnityEngine.XR.Content.Interaction;
 
 public class FlyJoystick : MonoBehaviour
 {
-    public float speed = 1.2f; 
+    public float speed = 2.5f; 
     public float speedAmplifier = 1.5f;
-    public float rotationSpeed = 4.5f;
+    public float rotationSpeed = 10.5f;
 
+    public GameObject player;
+    public XRJoystick joystick; 
 
     // Start is called before the first frame update
     void Start()
@@ -19,16 +21,16 @@ public class FlyJoystick : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float inputPitch = Input.GetAxis("Pitch");
+        float virtualRoll = joystick.value.x;
+        float virtualPitch = joystick.value.y;
+
         float inputYaw = Input.GetAxis("Yaw");
-        float inputRoll = Input.GetAxis("Roll");
-        float inputSpeed = Input.GetAxis("Throttle") - speedAmplifier * Time.deltaTime;
 
-        this.transform.Rotate(inputPitch * rotationSpeed * Time.deltaTime, 
-                              inputYaw * rotationSpeed * Time.deltaTime,
-                              inputRoll * rotationSpeed * Time.deltaTime );
+        player.transform.Rotate(virtualPitch * rotationSpeed * Time.deltaTime, 
+                              virtualRoll * rotationSpeed * Time.deltaTime,
+                              virtualRoll * -rotationSpeed * Time.deltaTime );
 
-        this.transform.Translate(Vector3.back * inputSpeed);
+        player.transform.Translate(Vector3.forward * speed );
 
 
     }

@@ -27,7 +27,7 @@ public class DisplayFLightData : MonoBehaviour
         textHeigth.SetText( "Alt: {0:2}ft", player.transform.position.y * 3.28f);
 
         //This one needs to be fixed!!!
-        textSpeed.SetText( "Speed: {0:1}km/h", Input.GetAxis( "Throttle" ) + (flyJoystick.speedAmplifier * Time.deltaTime ) * 100f ) ;
+        textSpeed.SetText( "Speed: 100%") ;
 
 
         if(player.transform.position.y <= warningHeigth)
